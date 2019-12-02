@@ -18,8 +18,28 @@ def play_Game(action_list):
         
     return action
 
-glist = [0, 0, 0, 0]
+def play_Check(check):
+    if check == 0:
+        print("스트라이크!")
+    elif check == 1:
+        print("볼!")
+    elif check == 2:
+        print("안타! 다음 타자가 타석에 입장했습니다.")
+    elif check == 3:
+        print("아웃! 다음 타자가 타석에 입장했습니다.")
+
+glist = [0, 0, 0, 0] # 스트 / 볼 / 안타 / 아웃 카운트 하는 list
+random_check = 0
+play_check = 0
+
 
 game_Start()
-play_Game(glist)
+
+# 0,1,2,3 -> 스트라이크 / 볼 / 안타/ 아웃 -> 체크에 넣음
+random_check = play_Game(glist)
+
+#랜덤으로 나온것 출력
+play_Check(random_check) 
+
+
 
