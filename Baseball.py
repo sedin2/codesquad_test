@@ -28,6 +28,10 @@ def play_Check(check):
     elif check == 3:
         print("아웃! 다음 타자가 타석에 입장했습니다.")
 
+def play_Show(action_list):
+    print(str(action_list[0]) + "S " + str(action_list[1]) + "B " + str(action_list[2]) + "H " + str(action_list[3]) + "Out ")
+    print("")
+
 glist = [0, 0, 0, 0] # 스트 / 볼 / 안타 / 아웃 카운트 하는 list
 random_check = 0
 play_check = 0
@@ -41,5 +45,6 @@ random_check = play_Game(glist)
 #랜덤으로 나온것 출력
 play_Check(random_check) 
 
+play_Show(glist)
 
 
