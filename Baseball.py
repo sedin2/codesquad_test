@@ -18,9 +18,15 @@ def play_Game(action_list):
         
     return action
 
-def play_Check(check):
-    if check == 0:
+def play_Check(action_list, check):
+    if check == 0 and action_list[0] <3:
         print("스트라이크!")
+        return 0
+    elif check == 0 and action_list[0] == 3:
+        print("스트라이크!")
+        print("아웃! 다음 타자가 타석에 입장했습니다.")
+        action_list[3] += 1                                 #3스트 1아웃 추가
+        return 3
     elif check == 1:
         print("볼!")
     elif check == 2:
@@ -43,7 +49,7 @@ game_Start()
 random_check = play_Game(glist)
 
 #랜덤으로 나온것 출력
-play_Check(random_check) 
+play_check = play_Check(glist, random_check)
 
 play_Show(glist)
 
