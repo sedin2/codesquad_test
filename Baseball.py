@@ -27,8 +27,14 @@ def play_Check(action_list, check):
         print("아웃! 다음 타자가 타석에 입장했습니다.")
         action_list[3] += 1                                 #3스트 1아웃 추가
         return 3
-    elif check == 1:
+    elif check == 1 and action_list[1] < 4:
         print("볼!")
+        return 1
+    elif check == 1 and action_list[1] == 4:
+        print("볼!")
+        print("안타! 다음 타자가 타석에 입장했습니다.")
+        action_list[check+1] += 1                           #4볼 1안타 추가
+        return 2 
     elif check == 2:
         print("안타! 다음 타자가 타석에 입장했습니다.")
     elif check == 3:
