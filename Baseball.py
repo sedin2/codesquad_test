@@ -44,6 +44,10 @@ def play_Show(action_list):
     print(str(action_list[0]) + "S " + str(action_list[1]) + "B " + str(action_list[2]) + "H " + str(action_list[3]) + "Out ")
     print("")
 
+def play_Init(action_list):
+    action_list[0] = 0
+    action_list[1] = 0
+    
 glist = [0, 0, 0, 0] # 스트 / 볼 / 안타 / 아웃 카운트 하는 list
 random_check = 0
 play_check = 0
