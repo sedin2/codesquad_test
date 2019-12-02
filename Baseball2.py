@@ -19,8 +19,16 @@ def write_File(file_name):
     print()
     print("팀 데이터 입력이 완료되었습니다.")
     
-def open_File():
-    return 1
+def open_File(file_name):
+    file = open(file_name, 'rt', encoding = 'UTF-8')
+    try:
+        for s in file:
+            print(s.strip())
+    except:
+        print("오류")
+    finally:
+        print()
+        file.close()
 
 while(True):
     print("신나는 야구시합")
@@ -33,7 +41,7 @@ while(True):
     if num == 1:
         write_File('baseball.txt')
     elif num == 2:
-        open_File()
+        open_File('baseball.txt')
     elif num == 4:
         break
     else:
