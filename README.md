@@ -41,7 +41,7 @@ def play_Game(action_list):
 </pre>
     0, 1, 2, 3 4개의 랜덤 숫자를 이용해 스트라이크/ 볼/ 안타/ 아웃 4가지 Action을 구현
     
-* 출력 하는 def ** play_Check()** 함수 구현
+* 출력 하는 def **play_Check()** 함수 구현
 <pre>
 def play_Check(check):
     if check == 0:
